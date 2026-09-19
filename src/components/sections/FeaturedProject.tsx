@@ -1,4 +1,4 @@
-import { Code } from 'lucide-react';
+import { Code, ArrowUpRight } from 'lucide-react';
 import { Pill } from '../ui/Pill';
 import { FlowDiagram } from '../ui/FlowDiagram';
 import type { Project } from '../../data/projects';
@@ -14,10 +14,13 @@ export function FeaturedProject({ project, reverse = false }: { project: Project
   const isRag = project.id === 'rag';
   const isEop = project.id === 'eop';
 
+  const scrollToDeepDives = () =>
+    document.getElementById('deep-dives')?.scrollIntoView({ behavior: 'smooth' });
+
   return (
     <div className="rounded-2xl border border-ink-700/10 bg-white p-6 shadow-sm sm:p-10">
       <div className={`flex flex-col gap-2 ${reverse ? 'items-end text-right' : ''}`}>
-        <Pill tone="accent">Flagship Project</Pill>
+        <Pill tone="accent">{project.badge ?? 'Flagship Project'}</Pill>
         <h3 className="mt-3 text-2xl font-semibold tracking-tight text-ink-900 sm:text-3xl">
           {project.name}
         </h3>
@@ -32,16 +35,25 @@ export function FeaturedProject({ project, reverse = false }: { project: Project
         ))}
       </div>
 
-      {project.github && (
-        <a
-          href={project.github}
-          target="_blank"
-          rel="noreferrer"
-          className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-ink-800 hover:text-accent-600"
+      <div className="mt-6 flex flex-wrap items-center gap-5">
+        <button
+          onClick={scrollToDeepDives}
+          className="inline-flex items-center gap-2 text-sm font-medium text-ink-800 hover:text-accent-600"
         >
-          <Code className="size-4" /> View Repository
-        </a>
-      )}
+          View Case Study <ArrowUpRight className="size-4" />
+        </button>
+        {project.github && (
+          <a
+            href={project.github}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2 text-sm font-medium text-ink-800 hover:text-accent-600"
+          >
+            <Code className="size-4" /> View on GitHub
+          </a>
+        )}
+      </div>
+
 
       <div className="mt-10 grid gap-10 lg:grid-cols-5">
         <div className="lg:col-span-3">

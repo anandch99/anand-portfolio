@@ -1,4 +1,4 @@
-import { ArrowRight, Link as LinkIcon, Code } from 'lucide-react';
+import { ArrowRight, Download, Code } from 'lucide-react';
 import { Container } from '../ui/Container';
 import { profile, contact } from '../../data/profile';
 
@@ -48,12 +48,11 @@ export function Hero() {
               View Projects <ArrowRight className="size-4" />
             </button>
             <a
-              href={contact.linkedin}
-              target="_blank"
-              rel="noreferrer"
+              href={`${import.meta.env.BASE_URL}${profile.resumePath}`}
+              download
               className="inline-flex items-center gap-2 rounded-md border border-ink-700/15 px-5 py-3 text-sm font-medium text-ink-900 transition-colors hover:bg-ink-900/5"
             >
-              <LinkIcon className="size-4" /> LinkedIn
+              <Download className="size-4" /> Download Resume
             </a>
             <a
               href={contact.github}
@@ -66,7 +65,7 @@ export function Hero() {
           </div>
 
           <p className="mt-10 border-l-2 border-accent-500/60 pl-4 text-sm text-ink-500 italic">
-            {profile.availability}
+            {profile.location} · {profile.availability}
           </p>
         </div>
 

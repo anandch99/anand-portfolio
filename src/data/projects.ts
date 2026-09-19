@@ -8,6 +8,7 @@ export interface Project {
   architecture?: string[];
   github?: string;
   flagship?: boolean;
+  badge?: string;
 }
 
 export const eopProject: Project = {
@@ -16,6 +17,7 @@ export const eopProject: Project = {
   tagline: 'Centralized monitoring for APIs, applications and infrastructure',
   description:
     'A centralized monitoring and observability platform designed to monitor APIs, applications and server infrastructure.',
+  badge: 'FLAGSHIP PROJECT · OBSERVABILITY',
   technology: [
     'ASP.NET Core',
     'PostgreSQL',
@@ -53,10 +55,11 @@ export const eopProject: Project = {
 
 export const ragProject: Project = {
   id: 'rag',
-  name: 'Enterprise RAG-Based Document Search System',
+  name: 'Enterprise RAG Knowledge Platform',
   tagline: 'AI-powered document retrieval and question-answering',
   description:
     'An AI-powered document retrieval and question-answering platform combining document processing, embeddings, vector search and LLM generation.',
+  badge: 'FLAGSHIP PROJECT · AI ENGINEERING',
   technology: [
     'ASP.NET Core',
     'PostgreSQL',

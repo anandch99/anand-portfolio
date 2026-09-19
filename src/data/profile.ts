@@ -12,12 +12,13 @@ export const profile = {
     'Backend-focused engineer building enterprise applications, scalable APIs, AI-powered knowledge systems and observability platforms.',
   heroHeading: 'Senior .NET Backend Engineer & Technical Team Lead',
   heroSubheading:
-    'Building enterprise backend systems, scalable APIs, AI-powered applications and observability platforms.',
+    'Building scalable enterprise applications, backend platforms, AI-powered knowledge systems and observability solutions.',
   heroSupporting:
-    'Backend-focused engineer specializing in ASP.NET Core, PostgreSQL and distributed systems, with hands-on experience integrating RAG/LLM solutions and OpenTelemetry into enterprise applications.',
+    'Backend-focused engineer specializing in ASP.NET Core, C#, PostgreSQL and distributed systems, with hands-on experience integrating RAG/LLM solutions and OpenTelemetry into enterprise applications.',
+  location: 'Hyderabad, India',
   availability:
-    'Open to Senior Backend Engineer and Technical Lead opportunities.',
-  resumePath: '/resume/Anand-Kumar-Chinta-Resume.pdf',
+    'Open to Senior Backend Engineer and Technical Lead opportunities across Europe.',
+  resumePath: 'resume/Anand-Kumar-Chinta-Resume.pdf',
 };
 
 export const contact: ContactInfo = {

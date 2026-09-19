@@ -1,18 +1,6 @@
-import {
-  Users,
-  Code2,
-  Users2,
-  Gauge,
-  Workflow,
-  Rocket,
-  Sparkles,
-  Building2,
-} from 'lucide-react';
 import { Container } from '../ui/Container';
 import { SectionHeading } from '../ui/SectionHeading';
-import { achievements } from '../../data/achievements';
-
-const icons = [Users, Code2, Users2, Gauge, Workflow, Rocket, Sparkles, Building2];
+import { metrics } from '../../data/achievements';
 
 export function Highlights() {
   return (
@@ -25,22 +13,20 @@ export function Highlights() {
         />
 
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {achievements.map((item, i) => {
-            const Icon = icons[i % icons.length];
-            return (
-              <div
-                key={item.label}
-                className="group rounded-xl border border-ink-700/10 bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
-              >
-                <div className="mb-4 flex size-10 items-center justify-center rounded-lg bg-accent-500/10 text-accent-600">
-                  <Icon className="size-5" />
-                </div>
-                <p className="text-sm leading-relaxed font-medium text-ink-800">{item.label}</p>
-              </div>
-            );
-          })}
+          {metrics.map((item) => (
+            <div
+              key={item.label}
+              className="rounded-xl border border-ink-700/10 bg-white p-6 shadow-sm"
+            >
+              <p className="font-mono text-2xl font-semibold tracking-tight text-ink-900">
+                {item.value}
+              </p>
+              <p className="mt-2 text-sm text-ink-500">{item.label}</p>
+            </div>
+          ))}
         </div>
       </Container>
     </section>
   );
 }
+

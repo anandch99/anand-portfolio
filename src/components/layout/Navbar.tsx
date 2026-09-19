@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
-import { Menu, X, Link as LinkIcon } from 'lucide-react';
+import { Menu, X, Link as LinkIcon, Code, Download } from 'lucide-react';
 import { Container } from '../ui/Container';
 import { navItems } from '../../data/nav';
-import { contact } from '../../data/profile';
+import { contact, profile } from '../../data/profile';
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
@@ -95,14 +95,33 @@ export function Navbar() {
           ))}
         </nav>
 
-        <a
-          href={contact.linkedin}
-          target="_blank"
-          rel="noreferrer"
-          className="hidden items-center gap-2 rounded-md bg-paper-50 px-4 py-2 text-sm font-medium text-ink-950 transition-colors hover:bg-paper-100 lg:inline-flex"
-        >
-          <LinkIcon className="size-4" /> LinkedIn
-        </a>
+        <div className="hidden items-center gap-1 lg:flex">
+          <a
+            href={contact.github}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="GitHub"
+            className="inline-flex size-9 items-center justify-center rounded-md text-ink-500 transition-colors hover:bg-paper-50/10 hover:text-paper-50"
+          >
+            <Code className="size-4" />
+          </a>
+          <a
+            href={contact.linkedin}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2 rounded-md bg-paper-50 px-4 py-2 text-sm font-medium text-ink-950 transition-colors hover:bg-paper-100"
+          >
+            <LinkIcon className="size-4" /> LinkedIn
+          </a>
+          <a
+            href={`${import.meta.env.BASE_URL}${profile.resumePath}`}
+            download
+            aria-label="Download Resume"
+            className="inline-flex size-9 items-center justify-center rounded-md text-ink-500 transition-colors hover:bg-paper-50/10 hover:text-paper-50"
+          >
+            <Download className="size-4" />
+          </a>
+        </div>
 
         <button
           className="-mr-1 inline-flex shrink-0 items-center justify-center rounded-md p-2.5 text-paper-50 lg:hidden"
@@ -136,6 +155,23 @@ export function Navbar() {
               className="mt-2 inline-flex items-center gap-2 rounded-md bg-paper-50 px-3 py-2.5 text-sm font-medium text-ink-950"
             >
               <LinkIcon className="size-4" /> LinkedIn
+            </a>
+            <a
+              href={contact.github}
+              target="_blank"
+              rel="noreferrer"
+              onClick={() => setOpen(false)}
+              className="inline-flex items-center gap-2 rounded-md border border-paper-50/15 px-3 py-2.5 text-sm font-medium text-paper-50"
+            >
+              <Code className="size-4" /> GitHub
+            </a>
+            <a
+              href={`${import.meta.env.BASE_URL}${profile.resumePath}`}
+              download
+              onClick={() => setOpen(false)}
+              className="inline-flex items-center gap-2 rounded-md border border-paper-50/15 px-3 py-2.5 text-sm font-medium text-paper-50"
+            >
+              <Download className="size-4" /> Resume
             </a>
           </Container>
         </nav>

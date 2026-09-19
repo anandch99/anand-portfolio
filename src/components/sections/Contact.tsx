@@ -1,4 +1,4 @@
-import { Mail, Link as LinkIcon, Code, Phone } from 'lucide-react';
+import { Mail, Link as LinkIcon, Code } from 'lucide-react';
 import { Container } from '../ui/Container';
 import { SectionHeading } from '../ui/SectionHeading';
 import { contact, profile } from '../../data/profile';
@@ -7,7 +7,6 @@ const links = [
   { icon: Mail, label: 'Email', value: contact.email, href: `mailto:${contact.email}` },
   { icon: LinkIcon, label: 'LinkedIn', value: 'linkedin.com/in/anandkumarchinta', href: contact.linkedin },
   { icon: Code, label: 'GitHub', value: 'github.com/anandch99', href: contact.github },
-  { icon: Phone, label: 'Phone', value: contact.phone, href: `tel:${contact.phone}` },
 ];
 
 export function Contact() {

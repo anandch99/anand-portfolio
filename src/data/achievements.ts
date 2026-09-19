@@ -2,6 +2,18 @@ export interface Achievement {
   label: string;
 }
 
+export interface Metric {
+  value: string;
+  label: string;
+}
+
+export const metrics: Metric[] = [
+  { value: '9-member team', label: 'Technical leadership' },
+  { value: '100+ APIs', label: 'Enterprise REST APIs' },
+  { value: '30–40%', label: 'Database performance improvement' },
+  { value: '1,000+ users', label: 'Enterprise application usage' },
+];
+
 export const achievements: Achievement[] = [
   { label: 'Led a 9-member engineering team' },
   { label: 'Designed and developed 100+ secure REST APIs' },

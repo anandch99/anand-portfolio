@@ -20,7 +20,7 @@ export const architectureDiagrams: ArchitectureDiagram[] = [
   {
     id: 'rag',
     title: 'RAG Architecture',
-    steps: ['Documents', 'Chunking', 'Embedding', 'Vector Database', 'Retrieval', 'LLM'],
+    steps: ['Documents', 'Chunking', 'Embedding', 'pgvector', 'Retrieval', 'LLM'],
   },
   {
     id: 'observability',

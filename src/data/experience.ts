@@ -21,7 +21,7 @@ export const experience: ExperienceEntry[] = [
       'Conduct code reviews, technical design discussions, sprint planning and production deployments.',
       'Implement JWT authentication and role-based authorization.',
       'Optimize PostgreSQL queries and indexing strategies, achieving approximately 30–40% improvement in database response times in relevant workloads.',
-      'Design and integrate RabbitMQ-based asynchronous processing, handling approximately 500 messages/day in relevant workflows.',
+      'Design and integrate RabbitMQ-based asynchronous processing to decouple long-running work from API request handling.',
       'Collaborate with clients, stakeholders and cross-functional teams.',
       'Develop AI-powered applications using RAG, OpenAI APIs, Ollama and pgvector.',
       'Develop an enterprise monitoring platform using OpenTelemetry.',
