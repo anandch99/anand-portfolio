@@ -77,7 +77,7 @@ export function Hero() {
                 className="absolute -inset-3 rounded-2xl border border-accent-500/20"
               />
               <img
-                src="/images/profile.jpg"
+                src={`${import.meta.env.BASE_URL}images/profile.jpg`}
                 alt="Portrait of Anand Kumar Chinta"
                 className="relative size-52 rounded-2xl border border-ink-700/10 object-cover shadow-xl sm:size-64 lg:size-72"
                 width={288}

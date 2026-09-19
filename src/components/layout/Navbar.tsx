@@ -70,7 +70,7 @@ export function Navbar() {
           className="flex min-w-0 shrink items-center gap-2 font-mono text-sm font-semibold tracking-tight text-paper-50 sm:gap-2.5"
         >
           <img
-            src="/images/profile.jpg"
+            src={`${import.meta.env.BASE_URL}images/profile.jpg`}
             alt=""
             className="size-7 shrink-0 rounded-full border border-paper-50/15 object-cover sm:size-8"
           />
